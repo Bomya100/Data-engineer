@@ -1,9 +1,17 @@
-# ซ่อนกุญแจคลาวด์ (สำคัญที่สุด!)
 gcp-key.json
 
-# ซ่อนไฟล์ข้อมูลดิบ (เราไม่เอาข้อมูลดิบขึ้นระบบเวอร์ชันโค้ด)
+# ซ่อนไฟล์ข้อมูลดิบ 
 raw_bitcoin.json
 
 # ซ่อนไฟล์ขยะของ Python
 __pycache__/
 .env
+
+# ฐานข้อมูลและ Log ของ Airflow
+airflow_data/
+logs/
+raw_bitcoin.json
+
+# ไฟล์ขยะของ Python
+__pycache__/
+*.pyc

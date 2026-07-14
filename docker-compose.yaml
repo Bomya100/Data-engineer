@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  airflow-runner:
+    image: apache/airflow:2.7.1-python3.9
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False # ปิดเซ็ตติ้งตัวอย่าง 
+      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/data/airflow.db
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/data/airflow.db
+    volumes:
+      - ./dags:/opt/airflow/dags            # ผูกโฟลเดอร์ dags ในคอมเข้ากับตัว Airflow
+      - ./gcp-key.json:/opt/airflow/gcp-key.json # ส่งกุญแจ Google Cloud เข้ากล่อง Docker
+      - ./airflow_data:/opt/airflow/data
+    ports:
+      - "8080:8080"                         # เปิดประตูพอร์ต 8080 สำหรับหน้าเว็บ UI
+    command: standalone
