@@ -2,7 +2,7 @@
 
 โปรเจคสร้างสถาปัตยกรรมข้อมูล (Data Architecture) แบบ End-to-End เพื่อดึงข้อมูลราคา Bitcoin แบบ Real-time จัดเก็บลงบน Cloud Data Warehouse พร้อมทำ Data Transformation และแสดงผลผ่าน Dashboard แบบอัตโนมัติ
 
-<!-- ![Looker Studio Dashboard](./dashboard_preview.png) -->
+![Looker Studio Dashboard](./dashboard_preview.png)
 
 
 ---
